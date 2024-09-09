@@ -1,5 +1,6 @@
 import requests
 import yaml
+import pandas as pd
 
 from app.config import Settings
 
@@ -37,6 +38,6 @@ def get_devices():
                     respuesta.append(filter)
 
         guardar_respuesta_en_yaml(respuesta, archivo_yaml)
-        return respuesta
+        return pd.DataFrame(respuesta)
     else:
         raise Exception("No se pudo obtener la respuesta del servicio get devices.")
