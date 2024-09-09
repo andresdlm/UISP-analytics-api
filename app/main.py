@@ -19,14 +19,6 @@ def update_data():
     services = get_services()
     archived_clients = get_archived_clients()
     return clients, devices, services, archived_clients
-    
-
-# Función para filtrar elementos que contienen el tag con id 20
-def filter_tags(tags):
-    for tag in tags:
-        if tag['id'] == 102:
-            return True
-    return False
 
 
 @app.get("/getBlacklist")
