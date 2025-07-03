@@ -14,6 +14,7 @@ Antes de ejecutar el proyecto, asegúrate de seguir estos pasos:
    Sustituye **URL_DEL_SISTEMA_UISP** y **TU_TOKEN_DE_AUTENTICACION** con la URL del sistema UISP de Ubiquiti y tu token de autenticación respectivamente.
 2. **Archivos YAML:**
    Crea los siguientes archivos vacíos en la raíz del proyecto:
+    `data/archived_clients.yaml`
     `data/clients.yaml`
     `data/devices.yaml`
     `data/services.yaml`
@@ -25,7 +26,7 @@ Antes de ejecutar el proyecto, asegúrate de seguir estos pasos:
 
 ## Ejecutar la Aplicación:
 Una vez configurado el entorno, puedes ejecutar la aplicación con el siguiente comando:
-`$ uvicorn main:app --host 0.0.0.0 --port 8000 --reload`
+`$ fastapi dev app/main.py`
 La aplicación estará disponible en http://localhost:8000.
 
 ## Docker
