@@ -5,4 +5,4 @@ class Settings(BaseSettings):
     uisp_url: str = ""
     x_auth_token: str = ""
 
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
